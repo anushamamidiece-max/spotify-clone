@@ -3,8 +3,8 @@
 > ⚠️ **Educational UI clone built for learning purposes only.**
 > Sonora is an original fictional music streaming interface created to demonstrate frontend development skills. It is not affiliated with Spotify or any music streaming platform.
 
-🔗 **Live Demo:** https://your-live-demo-link.com  
-💻 **Source Code:** https://github.com/yourusername/sonora
+🔗 **Live Demo:** https://anushamamidiece-max.github.io/spotify-clone/  
+💻 **Source Code:** https://github.com/anushamamidiece-max/spotify-clone
 
 ---
 
@@ -146,7 +146,7 @@ sonora/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/sonora.git
+git clone https://github.com/anushamamidiece-max/spotify-clone.git
 ```
 
 Move into the project folder
@@ -255,9 +255,9 @@ Electronics & Communication Engineering (ECE)
 
 Aspiring Full Stack Java Developer
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/anushamamidiece-max
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/anusha-mamidi-9a4681302/
 
 ---
 
