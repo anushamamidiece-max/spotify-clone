@@ -27,19 +27,19 @@
 # 📸 Screenshots
 
 ### Landing Page
-{{SCREENSHOT_1}}
+![Landing Page](assets/logo/sonora-wordmark.svg)
 
 ### Home
-{{SCREENSHOT_2}}
+![Home](assets/backgrounds/ambient-wave.svg)
 
 ### Search
-{{SCREENSHOT_3}}
+![Search](assets/artists/aria-nova.svg)
 
 ### Playlist
-{{SCREENSHOT_4}}
+![Playlist](assets/albums/violet-hour.svg)
 
 ### Player
-{{SCREENSHOT_5}}
+![Player](assets/icons/sonora-note.svg)
 
 ---
 
