@@ -1,0 +1,82 @@
+/* Theme tokens. The app starts with <body class="dark">; remove .dark for the light palette. */
+:root {
+  --bg:#F7F7F7;
+  --card:#FFFFFF;
+  --text:#111111;
+  --secondary:#555555;
+  --border:#E5E5E5;
+  --accent:#1DB954;
+  --hover:#F0F0F0;
+  --control:#ECECEC;
+  --panel:#FFFFFF;
+  --shadow:0 10px 28px rgba(17,17,17,.12);
+  --surface:var(--card);
+  --surface2:var(--hover);
+  --surface3:#DEDEDE;
+  --muted:var(--secondary);
+  --dim:#777777;
+  --green:var(--accent);
+  --green-bright:#28D867;
+  --line:var(--border);
+  color-scheme:light;
+}
+body.dark {
+  --bg:#121212;
+  --card:#181818;
+  --text:#FFFFFF;
+  --secondary:#B3B3B3;
+  --border:#333333;
+  --accent:#1DB954;
+  --hover:#282828;
+  --control:#242424;
+  --panel:#121212;
+  --shadow:0 10px 35px rgba(0,0,0,.42);
+  --surface:var(--card);
+  --surface2:#242424;
+  --surface3:#2A2A2A;
+  --muted:var(--secondary);
+  --dim:#858585;
+  --green:var(--accent);
+  --green-bright:#28D867;
+  --line:var(--border);
+  color-scheme:dark;
+}
+html,body { background:var(--bg)!important; color:var(--text)!important; }
+body { transition:background .28s ease,color .28s ease; }
+.app-shell { background:var(--bg)!important; }
+.sidebar,.side-library,.main-panel,.queue-panel,.modal { background:var(--card)!important; color:var(--text)!important; }
+.main-panel { background:linear-gradient(180deg,color-mix(in srgb,var(--card) 84%,var(--control)) 0,var(--bg) 330px)!important; }
+.topbar { background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 94%,transparent),color-mix(in srgb,var(--bg) 55%,transparent) 65%,transparent)!important; }
+.player { background:var(--panel)!important; color:var(--text)!important; border-top:1px solid var(--border); }
+.app-shell :is(h1,h2,h3,h4,.page-heading,.section-head h2,.card-title,.side-logo,.song-main b,.library-row b,.track-text b,.queue-item b,.profile-hero h1,.hero-meta h1) { color:var(--text)!important; }
+.app-shell :is(p,.card-subtitle,.side-nav a,.library-heading,.mini-info span,.sidebar-foot,.song-main small,.song-table td,.song-table th,.library-row span,.track-text span,.queue-item span,.player-right,.control,.heart-player,.show-all,.clock,.setting p,.search-intro p) { color:var(--secondary)!important; }
+.side-nav a.active,.side-nav a:hover,.library-heading:hover,.mini-playlist:hover { background:var(--hover)!important; color:var(--text)!important; }
+.music-card { background:var(--card)!important; border:1px solid transparent; box-shadow:none; }
+.music-card:hover { background:var(--hover)!important; border-color:var(--border); box-shadow:var(--shadow)!important; transform:scale(1.03); }
+.quick-card { background:color-mix(in srgb,var(--card) 75%,var(--control))!important; color:var(--text)!important; }
+.quick-card:hover { background:var(--hover)!important; }
+.chip { background:var(--control)!important; color:var(--text)!important; }
+.chip.active { background:var(--text)!important; color:var(--bg)!important; }
+.song-table th { border-color:var(--border)!important; }
+.song-table tr.song-row:hover td { background:var(--hover)!important; color:var(--text)!important; }
+.song-table tr.song-row:hover .song-main small { color:var(--secondary)!important; }
+.round-btn,.install-btn,.avatar-btn,.auth-signin { background:var(--control)!important; color:var(--text)!important; }
+.premium-btn,.auth-signup { background:var(--text)!important; color:var(--bg)!important; }
+.search-wrap { background:var(--card)!important; color:var(--text)!important; border:1px solid var(--border); }
+.search-wrap input { color:var(--text)!important; }
+.search-wrap input::placeholder { color:var(--secondary); opacity:1; }
+.range .range-bg { background:var(--border)!important; }.range .range-fill { background:var(--secondary)!important; }.range:hover .range-fill { background:var(--accent)!important; }
+.control.play-main { background:var(--text)!important; color:var(--bg)!important; }.control.play-main:hover,.big-play,.card-play,.quick-play { background:var(--accent)!important; color:#071B0E!important; }
+.queue-item:hover,.setting:hover { background:var(--hover)!important; }.setting { border-color:var(--border)!important; }
+.auth-form input { background:var(--control)!important; color:var(--text)!important; border-color:var(--border)!important; }.auth-form input:focus { border-color:var(--accent)!important; box-shadow:0 0 0 1px var(--accent)!important; }
+.toast { background:var(--card)!important; color:var(--text)!important; border:1px solid var(--border); }
+.genre-card { color:#fff; }
+/* Carousel cards have deliberate, consistent dimensions and remain touch / mouse draggable. */
+.carousel-section { overflow:visible; }.section-actions { display:flex; align-items:center; gap:7px; }.carousel-arrow { width:31px; height:31px; display:grid; place-items:center; border:0; border-radius:50%; background:var(--control); color:var(--text); opacity:.95; }.carousel-arrow:hover { background:var(--hover); transform:scale(1.06); }.carousel-arrow svg{width:17px}.carousel { position:relative; }.card-row { grid-auto-columns:220px!important; grid-template-columns:repeat(7,220px)!important; gap:17px!important; padding:2px 1px 15px!important; cursor:grab; touch-action:pan-y; scroll-snap-type:x proximity; }.card-row.is-dragging { cursor:grabbing; user-select:none; scroll-snap-type:none; }.music-card { min-height:320px!important; padding:18px!important; scroll-snap-align:start; }.music-card .art-wrap { width:180px; height:180px; aspect-ratio:auto; margin:0 auto 17px!important; }.music-card .card-title { font-size:15px; margin-top:1px; }.music-card .card-subtitle { min-height:38px; }.music-card .card-play { right:15px; bottom:15px; }.music-card.artist .art-wrap { border-radius:50%; }
+/* Ensure themes also apply to textual utility chrome, footer and empty states. */
+.footer,.landing-foot,.sidebar-foot,.empty-state,.empty-state p,.modal p,.lyrics-lines p { color:var(--secondary)!important; }.empty-state h2,.modal h2 { color:var(--text)!important; }
+body:not(.dark) .landing { background:var(--bg)!important; } body:not(.dark) .landing::before { background:radial-gradient(circle at 75% 27%,rgba(29,185,84,.22),transparent 27%),radial-gradient(circle at 18% 74%,rgba(92,63,196,.17),transparent 25%),linear-gradient(130deg,#F7F7F7 0%,#F0F0F2 55%,#EFFAF3 100%)!important; } body:not(.dark) .landing :is(.landing-nav,.hero,.hero h1,.brand,.nav-links a,.text-link) { color:var(--text)!important; } body:not(.dark) .landing p { color:var(--secondary)!important; } body:not(.dark) .landing-foot { border-color:var(--border)!important; }
+@media (max-width:1180px){.card-row{grid-auto-columns:200px!important;grid-template-columns:repeat(5,200px)!important}.music-card{min-height:300px!important}.music-card .art-wrap{width:164px;height:164px}}
+@media (max-width:870px){.card-row{grid-auto-columns:calc((100% - 28px)/3)!important;grid-template-columns:none!important}.music-card{min-height:280px!important}.music-card .art-wrap{width:100%;height:auto;aspect-ratio:1}.carousel-arrow{display:none}}
+@media (max-width:600px){.card-row{grid-auto-columns:calc((100% - 12px)/2)!important;gap:12px!important}.music-card{min-height:264px!important;padding:12px!important}.music-card .art-wrap{margin-bottom:12px!important}.music-card .card-play{right:8px;bottom:8px}.section-actions .show-all{display:block}}
+@media (max-width:390px){.card-row{grid-auto-columns:82%!important}.music-card{min-height:312px!important}.music-card .art-wrap{width:100%;height:auto}}
